@@ -17,9 +17,6 @@ KEB binary allows you to override some configuration parameters. You can specify
 | **APP_PROVISIONING_URL** | Specifies a URL to the Provisioner's API. | None |
 | **APP_PROVISIONING_SECRET_NAME** | Specifies the name of the Secret which holds credentials to the Provisioner's API. | None |
 | **APP_PROVISIONING_GARDENER_PROJECT_NAME** | Defines the Gardener project name. | `true` |
-| **APP_PROVISIONING_GCP_SECRET_NAME** | Defines the name of the Secret which holds credentials to GCP. | None |
-| **APP_PROVISIONING_AWS_SECRET_NAME** | Defines the name of the Secret which holds credentials to AWS. | None |
-| **APP_PROVISIONING_AZURE_SECRET_NAME** | Defines the name of the Secret which holds credentials to Azure. | None |
 | **APP_AUTH_USERNAME** | Specifies the Kyma Environment Service Broker authentication username. | None |
 | **APP_AUTH_PASSWORD** | Specifies the Kyma Environment Service Broker authentication password. | None |
 | **APP_DIRECTOR_NAMESPACE** | Specifies the Namespace in which Director is deployed. | `compass-system` |
@@ -32,3 +29,5 @@ KEB binary allows you to override some configuration parameters. You can specify
 | **APP_DATABASE_PORT** | Defines the database port. | `5432` |
 | **APP_DATABASE_NAME** | Defines the database name. | `broker` |
 | **APP_DATABASE_SSL** | Specifies the SSL Mode for PostgrSQL. See all the possible values [here](https://www.postgresql.org/docs/9.1/libpq-ssl.html).  | `disable`|
+| **APP_GARDENER_PROJECT** | Defines the name of Gardener project where HAP will lookup for credential secrets
+| **APP_GARDENER_KUBECONFIG_PATH** | Defines the path inside mounted secret volume to kubeconfig of Gardener seed cluster. The kubeconfig is used by HAP to connect with Gardener seed cluster to lookup for provisioning credentials.
